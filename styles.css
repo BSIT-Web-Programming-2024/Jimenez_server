@@ -1,0 +1,199 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header & Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1c1c1c;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ffff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00ffff;
+}
+
+/* General Section Style */
+.section {
+    display: none; /* Hide all sections by default */
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    padding: 0 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.section.active {
+    display: flex; /* Show only the active section */
+}
+
+/* Base styles for sections */
+.section {
+     opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 0s 1s;
+}
+
+/* When the section is active, make it visible */
+.section.active {
+   opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease-in-out, visibility 0s;
+}
+
+/* Fade-in animation for section appearance */
+.section.fade-in {
+    animation: fadeInAnimation 0.8s ease-out forwards;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Slight upward motion */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Normal position */
+    }
+}
+/* Background Images */
+#home {
+    background: url('xlnfce4crcsa1.jpg') no-repeat center center/cover;
+}
+
+#about {
+    background: url('nighttime-nature-landscape-galaxy-mountain-water-star-beauty-generative-ai.jpg') no-repeat center center/cover;
+}
+
+#services {
+    background: url('sunset-silhouettes-trees-mountains-generative-ai.jpg') no-repeat center center/cover;
+}
+
+#projects {
+    background: url('coast-landscape-digital-art.jpg') no-repeat center center/cover;
+}
+
+#contact {
+    background: url('beautiful-mountains-landscape_23-2151151061.jpg') no-repeat center center/cover;
+}
+
+/* Section Content Styling */
+.overlay, .section-content {
+    max-width: 600px;
+    text-align: right;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-radius: 10px;
+}
+
+/* Buttons */
+.cta-button {
+    background-color: #00ffff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #008b8b;
+}
+
+.service-card {
+    background: linear-gradient(135deg, #21bfdb, #0b2c68); /* Gradient background */
+    color: #fff;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 15px; /* Increased radius for more rounded corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+    
+}
+
+.service-card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    background: linear-gradient(135deg, #0b2c68, #21bfdb); 
+    align-items: center;
+    display: flex;
+
+    /* Inverse gradient on hover */
+}
+
+.services-list {
+    list-style: none; /* Remove bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Optional: Make it flex for easier alignment */
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Add space between cards */
+}
+
+
+
+/* Projects Grid Styles */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 20px; /* Optional: add some padding */
+    
+}
+
+.project-card {
+    background-color: #0cdfee; /* Solid background color for projects */
+    color: #fff;
+    padding: 2rem;
+    border-radius: 15px; /* Increased radius for rounded corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+    
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    background-color: #0c588b; /* Darker shade on hover */
+    align-items: center;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1c1c1c;
+    color: #fff;
+}

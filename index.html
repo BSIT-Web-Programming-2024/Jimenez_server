@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">My Portfolio</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section">
+            <div class="overlay">
+                <h1>Welcome to My Portfolio</h1>
+                <p>I'm Michael Anthony Jimenez, a creative web developer.</p>
+                <button class="cta-button">Discover More</button>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="section-content">
+                <h2>About Me</h2>
+                <p>I am a skilled web developer with experience in HTML, CSS, JavaScript, and modern web technologies.</p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section">
+            <div class="section-content">
+                <h2>Services</h2>
+                <ul class="services-list">
+                    <li>
+                        <div class="service-card">
+                            <h3>Web Design</h3>
+                            <p>Creating visually appealing and user-friendly designs.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="service-card">
+                            <h3>Responsive Development</h3>
+                            <p>Ensuring your site looks great on all devices.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="service-card">
+                            <h3>JavaScript Solutions</h3>
+                            <p>Building dynamic and interactive web experiences.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="section-content">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>Project 1</h3>
+                        <p>Description of project 1</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Project 2</h3>
+                        <p>Description of project 2</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Project 3</h3>
+                        <p>Description of project 3</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="section-content">
+                <h2>Contact Me</h2>
+                <form id="contactForm" action="contact.php" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Michael Anthony Jimenez. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
